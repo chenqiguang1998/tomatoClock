@@ -1,0 +1,32 @@
+name: tomato_test
+description: A new Flutter project.
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.4.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  # 「-.docx」代码必需依赖
+  flutter_riverpod: ^2.5.1  # 状态管理（ConsumerWidget/StateNotifierProvider）
+  sqflite: ^2.3.3+1         # 本地数据库（Database/DBService）
+  sqflite_common_ffi: ^2.3.6 # 桌面平台SQLite支持
+  path_provider: ^2.1.3     # 获取本地路径（getApplicationDocumentsDirectory）
+  intl: ^0.20.2             # 日期格式化（DateFormat）
+  uuid: ^4.4.0              # 生成任务唯一ID（Uuid().v4()）
+  path: ^1.8.3              # 路径处理（db_service.dart 中 path.join）
+  shared_preferences: ^2.2.2 # Web平台本地存储
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0     # 代码规范（与你升级后的版本匹配）
+
+flutter:
+  uses-material-design: true
+dependency_overrides:
+  characters: ^1.4.1
+  material_color_utilities: ^0.13.0
+  meta: ^1.17.0
+  test_api: ^0.7.7
